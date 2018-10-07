@@ -4,7 +4,7 @@ steer Cozmo with your mouse.
 
 * Mimicks a control stick like on a remote controlled airplane 
 * In the center of the canvas, you will see a little circle. 
-* Click and drag this cirkle 
+* Click and drag this circle 
 * Dragging it up will send Cozmo forward, 
 * dragging it down will send Cozmo backward, 
 * dragging it to the right will make Cozmo turn right, 
