@@ -1,5 +1,5 @@
 # CozmoSteering
-steer Cozmo with your mouse. By now, only the user interface is programmed, Cozmo integration will come later
+steer Cozmo with your mouse. 
 
 
 * Mimicks a control stick like on a remote controlled airplane 
