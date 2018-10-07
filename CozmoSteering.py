@@ -30,7 +30,7 @@ def heartbeat ():
 	global OldSpeed
 	
 	if (OldSpeed != Speed):
-		# RobotGlobal.drive_wheels(Speed)
+		RobotGlobal.drive_wheels(Speed[0], Speed[1])
 		print (int(Speed[0]), int(Speed[1]))
 		OldSpeed = Speed
 	
@@ -122,7 +122,7 @@ Radius = 5			# radius of circle
 Width = 200			# height and width of window
 Height= Width
 Heartbeat = 250		# cycle time in ms for updating motor speeds 
-SpeedMax   = 50		# maximum motor speed in mm/sec
+SpeedMax   = 200		# maximum motor speed in mm/sec
 
 # global variables
 RelX = 0
@@ -157,14 +157,15 @@ WindowSteering.bind ("<Configure>", resizeWindow)
 
 WindowSteering.after (Heartbeat, heartbeat)								# start periodical function 
 
-def robotProgram():
+def robotProgram(robot: cozmo.robot.Robot):
 	global WindowSteering
 	global RobotGlobal
 	
+	RobotGlobal = robot
 	WindowSteering.mainloop()
 
 
 
-robotProgram()
+cozmo.run_program(robotProgram)
 
 
